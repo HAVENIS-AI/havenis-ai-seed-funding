@@ -365,44 +365,73 @@ const FinancialsSection: React.FC<{ tFunc: (key: string) => string; currentLang:
 );
 
 const TeamSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) => (
-    <section id="team">
-        <div className="max-w-7xl mx-auto px-5 text-center">
-            <h2 className="inline-block">{tFunc('team_detail_title')}</h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-12">{tFunc('team_detail_subtitle')}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
-                <div className="card !bg-transparent border-none shadow-none fade-in-up">
-                    <img src="https://robohash.org/DaniloKuss?set=set4&bgset=bg2&size=160x160" alt="AI-generated avatar for Danilo Kuss" className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-accent-cyan shadow-[0_0_20px_var(--accent-neon-glow)] transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async"/>
-                    <h4 className="font-bold text-xl text-white">{tFunc('team_m1_name_detail')}</h4>
-                    <p className="text-accent-cyan font-semibold">{tFunc('team_m1_role_detail')}</p>
-                    <p className="text-text-secondary text-sm mt-2">{tFunc('team_m1_desc_detail')}</p>
-                </div>
-                <div className="card !bg-transparent border-none shadow-none fade-in-up delay-1">
-                    <img src="https://robohash.org/SarahLeRoux?set=set4&bgset=bg2&size=160x160" alt="AI-generated avatar for Sarah Le Roux" className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-accent-cyan shadow-[0_0_20px_var(--accent-neon-glow)] transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async"/>
-                    <h4 className="font-bold text-xl text-white">{tFunc('team_m2_name_detail')}</h4>
-                    <p className="text-accent-cyan font-semibold">{tFunc('team_m2_role_detail')}</p>
-                    <p className="text-text-secondary text-sm mt-2">{tFunc('team_m2_desc_detail')}</p>
-                </div>
-                <div className="card !bg-transparent border-none shadow-none fade-in-up delay-2">
-                    <div className="w-40 h-40 rounded-full mx-auto mb-4 bg-bg-graphite-light border-2 border-dashed border-accent-cyan flex flex-col items-center justify-center">
-                        <UsersIcon className="w-12 h-12 text-accent-cyan mb-2"/>
-                        <span className="text-xs text-accent-cyan uppercase tracking-wider">{tFunc('team_m3_name_detail')}</span>
-                    </div>
-                    <h4 className="font-bold text-xl text-white invisible">Placeholder</h4>
-                    <p className="text-accent-cyan font-semibold">{tFunc('team_m3_role_detail')}</p>
-                    <p className="text-text-secondary text-sm mt-2">{tFunc('team_m3_desc_detail')}</p>
-                </div>
+            <section id="team" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                {lang === 'de' ? 'Unser Team' : 'Our Team'}
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                {lang === 'de' 
+                  ? 'Erfahrene Experten mit nachweisbarer Erfolgsbilanz' 
+                  : 'Experienced experts with proven track record'}
+              </p>
             </div>
-            <div className="fade-in-up delay-3 max-w-4xl mx-auto">
-                 <OptimizedImage
-                    src="/images/team-collaboration.webp"
-                    alt={tFunc('team_map_vis')}
-                    className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
-                    widths={[640, 800, 1024]}
-                    sizes="(min-width: 1024px) 896px, 100vw"
-                />
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Danilo Kuss - CEO & Co-Founder */}
+              <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                  DK
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-2 text-cyan-400">Danilo Kuss</h3>
+                <p className="text-center text-gray-400 mb-4 font-semibold">CEO & Co-Founder</p>
+                <div className="space-y-3 text-gray-300">
+                  <p className="text-sm">
+                    <span className="font-semibold text-cyan-400">Funktion:</span> Geschäftsführung, Technische Leitung & Produktentwicklung
+                  </p>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-semibold text-cyan-400">Erfahrung:</span> Spezialist für Sensorfusion, Wi-Fi Sensing und AI-Edge-Computing mit über 12 Jahren Erfahrung in IoT-Architektur und Machine-Learning-Deployment. Leitete zuvor F&E-Projekte bei Bosch.
+                  </p>
+                </div>
+              </div>
+
+              {/* Lara Nguyen - COO */}
+              <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                  LN
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-2 text-purple-400">Lara Nguyen</h3>
+                <p className="text-center text-gray-400 mb-4 font-semibold">COO</p>
+                <div className="space-y-3 text-gray-300">
+                  <p className="text-sm">
+                    <span className="font-semibold text-purple-400">Funktion:</span> Operations, Partnernetzwerk und Skalierung
+                  </p>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-semibold text-purple-400">Erfahrung:</span> Betriebswirtin mit Schwerpunkt Tech-Operations (TU München), Ex-Projektmanagerin bei Siemens Healthineers. Verantwortlich für Skalierungsprozesse, Budgetkontrolle und operative Exzellenz.
+                  </p>
+                </div>
+              </div>
+
+              {/* Dr. Elias Kern - CTO & Co-Founder */}
+              <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                  EK
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-2 text-green-400">Dr. Elias Kern</h3>
+                <p className="text-center text-gray-400 mb-4 font-semibold">CTO & Co-Founder</p>
+                <div className="space-y-3 text-gray-300">
+                  <p className="text-sm">
+                    <span className="font-semibold text-green-400">Funktion:</span> Strategische Vision, Investor Relations
+                  </p>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-semibold text-green-400">Erfahrung:</span> 10+ Jahre im Bereich KI-Systemarchitektur, promovierter Neuroinformatiker (ETH Zürich), ehemals bei DeepMind Research tätig. Verantwortlich für die Unternehmensstrategie, wissenschaftliche Ausrichtung und Investor Relations.
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+        </section>
 );
 
 const ContactSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) => {
