@@ -1,20 +1,17 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# HAVENIS AI - Seed Funding Landing Page
 
-# Run and deploy your AI Studio app
+A responsive, multi-language landing page for HAVENIS AI's seed funding round, showcasing their ethical AI sensing technology.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1FMtPtu09fZWuWSIqPM-CsvkMAVSYuoiR
+- Multi-language support (DE, EN, FR)
+- Responsive design
+- Interactive components
+- Vite + React + TypeScript
 
-## Run Locally
+## Deployment
 
-**Prerequisites:**  Node.js
+Deployed on Vercel: [https://havenis-ai-seed-funding.vercel.app](https://havenis-ai-seed-funding.vercel.app)
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+Built with Rebe by Composio 🚀
