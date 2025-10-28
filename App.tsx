@@ -145,7 +145,7 @@ const HeroSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) =>
     <section id="hero" className="text-center min-h-[90vh] flex flex-col justify-center items-center relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-15">
              <OptimizedImage
-                src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_b203c200-d4fa-4712-a8c4-11885f818b2c.jpeg"
+                src="/images/hero-image.webp"
                 alt="Konzeptbild einer Person, die in einem modernen Wohnzimmer meditiert, umgeben von Datenvisualisierungen"
                 className="w-full h-full object-cover"
                 widths={[640, 1024, 1280, 1920]}
@@ -179,7 +179,7 @@ const VisionSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) 
             </div>
             <div className="fade-in-up delay-1">
                  <OptimizedImage
-                    src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_06af520c-519b-4659-9943-34e2c942468d.jpeg"
+                    src="/images/vision-innovation.webp"
                     alt={tFunc('vision_vis')}
                     className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                     widths={[400, 640, 800]}
@@ -201,7 +201,7 @@ const ProductSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc })
                     <p className="text-text-secondary">{tFunc('product_schema_text')}</p>
                     <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_a48f4305-b3e3-4f93-ac04-89774653dd3f.jpeg"
+                            src="/images/product-showcase.webp"
                             alt={tFunc('product_schema_vis')}
                             className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                             widths={[400, 640, 800]}
@@ -214,7 +214,7 @@ const ProductSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc })
                     <p className="text-text-secondary">{tFunc('product_layers_text')}</p>
                     <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_b561b369-373b-4876-857e-07a8848d61e3.jpeg"
+                            src="/images/product-showcase.webp"
                             alt={tFunc('product_layers_vis')}
                             className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                             widths={[400, 640, 800]}
@@ -239,7 +239,7 @@ const UseCasesSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }
                     <p className="text-text-secondary flex-grow">{tFunc('use_case1_text')}</p>
                     <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_db33036c-2f92-4f39-8692-f08a4f91845f.jpeg"
+                            src="/images/use-cases.webp"
                             alt={tFunc('use_case1_vis')}
                             className="w-full h-auto rounded-lg"
                             widths={[300, 400, 600]}
@@ -253,7 +253,7 @@ const UseCasesSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }
                     <p className="text-text-secondary flex-grow">{tFunc('use_case2_text')}</p>
                      <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_4889c1ed-c956-4b53-a55e-4c7595c1815f.jpeg"
+                            src="/images/use-cases.webp"
                             alt={tFunc('use_case2_vis')}
                             className="w-full h-auto rounded-lg"
                             widths={[300, 400, 600]}
@@ -267,7 +267,7 @@ const UseCasesSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }
                     <p className="text-text-secondary flex-grow">{tFunc('use_case3_text')}</p>
                     <div className="mt-6">
                          <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_a48f4305-b3e3-4f93-ac04-89774653dd3f.jpeg"
+                            src="/images/product-showcase.webp"
                             alt={tFunc('use_case3_vis')}
                             className="w-full h-auto rounded-lg"
                             widths={[300, 400, 600]}
@@ -291,7 +291,7 @@ const MarketSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) 
                     <p className="text-text-secondary">{tFunc('market_chart_desc')}</p>
                      <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_3641de03-e66b-4e1a-82ef-50d4f29df5ab.jpeg"
+                            src="/images/market-analysis.webp"
                             alt={tFunc('market_chart_vis')}
                             className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                             widths={[400, 640, 800]}
@@ -304,7 +304,7 @@ const MarketSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) 
                     <p className="text-text-secondary">{tFunc('market_comparison_desc')}</p>
                     <div className="mt-6">
                         <OptimizedImage
-                            src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_2595f5fd-4171-419b-a01c-6d655f483c6f.jpeg"
+                            src="/images/market-analysis.webp"
                             alt={tFunc('market_comparison_vis')}
                             className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                             widths={[400, 640, 800]}
@@ -394,7 +394,7 @@ const TeamSection: React.FC<{ tFunc: (key: string) => string }> = ({ tFunc }) =>
             </div>
             <div className="fade-in-up delay-3 max-w-4xl mx-auto">
                  <OptimizedImage
-                    src="https://storage.googleapis.com/aistudio-main-prd/1f196a0f-87d5-412f-98c5-103323a67d56/_1869e5f5-f124-4f01-9a70-872f231f2390.jpeg"
+                    src="/images/team-collaboration.webp"
                     alt={tFunc('team_map_vis')}
                     className="w-full h-auto rounded-lg border border-cyan-500/20 shadow-lg"
                     widths={[640, 800, 1024]}
