@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVENIS AI | Seed Funding - Ethische KI-Sensorik</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Orbitron (Headlines) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define Custom Properties (CSS Variables) */
+        :root {
+            --bg-graphite-dark: #0d1117; /* Dunklerer Graphit */
+            --bg-graphite-light: #161b22; /* Hellerer Graphit für Panels */
+            --accent-cyan: #22d3ee; /* Hauptakzent Cyan */
+            --accent-cyan-light: #67e8f9;
+            --accent-neon-glow: rgba(34, 211, 238, 0.5); /* Neon Akzent für Schatten */
+            --text-primary: #e6edf3; /* Primärer heller Text */
+            --text-secondary: #7d8590; /* Sekundärer, gedämpfter Text */
+        }
+
+        /* Apply Base Styles & Fonts */
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-graphite-dark);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em; /* Leichter futuristischer Touch */
+        }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; color: #fff; font-weight: 900; }
+        h1 .highlight { color: var(--accent-cyan-light); text-shadow: 0 0 15px var(--accent-neon-glow); }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; color: #fff; border-left: 5px solid var(--accent-cyan); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); color: var(--accent-cyan); margin-bottom: 1rem; }
+        strong { font-weight: 700; color: #fff; } /* Bessere Sichtbarkeit für **Bold** */
+
+        /* Section Styling */
+        section {
+            padding: 100px 5%;
+            border-bottom: 1px solid rgba(125, 133, 144, 0.1); /* border-secondary */
+            position: relative; /* Für Parallax-Effekte */
+        }
+        section:last-of-type { border-bottom: none; }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(13, 17, 23, 0.85); /* bg-graphite-dark mit Transparenz */
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(125, 133, 144, 0.1);
+        }
+        .logo span { font-family: 'Orbitron', sans-serif; font-weight: 900; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem; /* Etwas größer */
+            border-radius: 9999px; /* pill shape */
+            font-weight: 700; /* Stärkerer Font */
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            text-transform: uppercase; /* Verstärkt den Tech-Look */
+            letter-spacing: 0.08em;
+            font-size: 0.9rem;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-cyan-light));
+            color: var(--bg-graphite-dark);
+            box-shadow: 0 5px 20px 0 var(--accent-neon-glow);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, var(--accent-cyan-light), var(--accent-cyan));
+            box-shadow: 0 8px 30px 0 rgba(103, 232, 249, 0.6);
+            transform: translateY(-3px) scale(1.02);
+        }
+        .btn-outline {
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background-color: rgba(34, 211, 238, 0.1);
+            color: var(--accent-cyan-light);
+            border-color: var(--accent-cyan-light);
+            transform: translateY(-2px);
+        }
+
+        /* Language Switcher */
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-switcher button.active {
+            background-color: var(--accent-cyan);
+            color: var(--bg-graphite-dark);
+            border-color: var(--accent-cyan);
+            font-weight: 700;
+            box-shadow: 0 0 10px 0 var(--accent-neon-glow);
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--bg-graphite-light);
+            padding: 2.5rem; /* Mehr Padding */
+            border-radius: 1.5rem; /* Stärkere Rundung */
+            border: 1px solid rgba(125, 133, 144, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative; /* Für innere Elemente */
+            overflow: hidden; /* Für Glüh-Effekte */
+        }
+        .card:hover {
+           transform: translateY(-8px) scale(1.01);
+           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+           border-color: rgba(34, 211, 238, 0.3);
+        }
+        .card::before { /* Subtiler Neon-Rand-Effekt beim Hover */
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, transparent, var(--accent-cyan)) border-box;
+            -webkit-mask:
+               linear-gradient(#fff 0 0) padding-box,
+               linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card:hover::before { opacity: 0.5; }
+
+        /* Visualization Placeholders */
+        .vis-placeholder {
+            background-color: rgba(34, 211, 238, 0.03); /* Leichter Cyan-Hintergrund */
+            border: 1px solid var(--accent-cyan);
+            border-radius: 0.75rem; /* Angepasste Rundung */
+            display: flex;
+            flex-direction: column; /* Text unter Icon */
+            align-items: center;
+            justify-content: center;
+            min-height: 280px; /* Etwas höher */
+            color: var(--accent-cyan-light);
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden; /* Für Glüh-Effekte */
+        }
+        .vis-placeholder::after { /* Animierter Glüh-Effekt */
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+            animation: rotateGlow 8s linear infinite;
+        }
+        @keyframes rotateGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 100ms; }
+        .delay-2 { transition-delay: 200ms; }
+        .delay-3 { transition-delay: 300ms; }
+        .delay-4 { transition-delay: 400ms; }
+
+        /* Contact Form */
+        #contact form input, #contact form textarea, #contact form select {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(125, 133, 144, 0.2);
+            color: var(--text-primary);
+            border-radius: 0.5rem; /* Einheitliche Rundung */
+            padding: 0.8rem 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        #contact form input:focus, #contact form textarea:focus, #contact form select:focus {
+            border-color: var(--accent-cyan);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
+        }
+        /* Custom Select Pfeil */
+        #contact form select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%237d8590' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            padding-right: 3rem; /* Platz für Pfeil */
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "chart.js": "https://aistudiocdn.com/chart.js@^4.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
