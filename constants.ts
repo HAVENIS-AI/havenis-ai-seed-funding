@@ -168,8 +168,21 @@ export const translations = {
         cta_sending: "Sending request...",
         cta_success: "Success! Pitch deck has been sent to your email.",
         cta_error: "Error sending. Please try again.",
-    },
-    fr: {
+    },,
+
+        // Team Section
+        team_title: "Meet Our Team",
+        team_subtitle: "Exceptional talent driving the future of ethical AI sensing. Leading experts in RF-AI, embedded systems, and health tech innovation.",
+        team_ceo: "CEO & CTO",
+        team_danilo_desc: "Visionary leader with deep expertise in RF-AI & Embedded Systems. Spearheading HAVENIS's innovation in contactless vital sensing.",
+        team_cofounder: "Co-Founder",
+        team_member2_desc: "Expert in healthcare technology and market expansion.",
+        team_engineer: "Lead Engineer",
+        team_member3_desc: "Specialized in AI signal processing and embedded systems development.",
+        team_cta_desc: "Join our growing team of innovators pushing the boundaries of AI sensing technology.",
+        team_cta_button: "Join Our Team",
+        expertise: "Expertise"
+        fr: {
         nav_vision: "Vision", nav_product: "Produit", nav_tech: "Technologie", nav_market: "Marché", nav_contact: "Contact",
         hero_title: "HAVENIS AI – <span class=\"highlight\">La Révolution du Human Sensing</span>",
         hero_subtitle: "Surveillance vitale par IA grâce à des ondes invisibles – sain, privé, précis.",
