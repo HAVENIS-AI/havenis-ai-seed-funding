@@ -8,6 +8,7 @@ import {
     TrendingUpIcon, CheckCheckIcon, CoinsIcon, PieChartIcon, 
     RocketIcon, UsersIcon, FileCheckIcon
 } from './components/Icons';
+import TeamSection from './TeamSection';
 
 // --- Helper Components ---
 // FIX: Use React.ElementType for the 'as' prop to correctly type the polymorphic component.
@@ -53,6 +54,16 @@ const OptimizedImage: React.FC<{
     );
 };
 
+// Import all section components
+import Header from './Header';
+import HeroSection from './HeroSection';
+import VisionSection from './VisionSection';
+import ProductSection from './ProductSection';
+import UseCasesSection from './UseCasesSection';
+import MarketSection from './MarketSection';
+import FinancialsSection from './FinancialsSection';
+import ContactSection from './ContactSection';
+import Footer from './Footer';
 
 // --- Main App Component ---
 const App: React.FC = () => {
@@ -69,7 +80,7 @@ const App: React.FC = () => {
         }
         document.documentElement.lang = lang;
     }, [lang]);
-    
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -103,3 +114,5 @@ const App: React.FC = () => {
         </>
     );
 };
+
+export default App;
