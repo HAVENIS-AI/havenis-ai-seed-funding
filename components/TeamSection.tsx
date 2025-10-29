@@ -1,0 +1,93 @@
+import React from 'react';
+
+interface TeamMember {
+  name: string;
+  role: string;
+  description: string;
+  expertise?: string;
+}
+
+interface TeamSectionProps {
+  tFunc: (key: string) => string;
+}
+
+const TeamSection: React.FC<TeamSectionProps> = ({ tFunc }) => {
+  const teamMembers: TeamMember[] = [
+    {
+      name: "Danilo Kuss",
+      role: tFunc('team_ceo'),
+      description: tFunc('team_danilo_desc'),
+      expertise: "RF-KI & Embedded Systems"
+    },
+    {
+      name: "Team Member 2",
+      role: tFunc('team_cofounder'),
+      description: tFunc('team_member2_desc'),
+      expertise: "Healthcare & Product Strategy"
+    },
+    {
+      name: "Team Member 3",
+      role: tFunc('team_engineer'),
+      description: tFunc('team_member3_desc'),
+      expertise: "AI & Signal Processing"
+    }
+  ];
+
+  return (
+    <section id="team" className="py-16 bg-gradient-to-b from-black via-gray-900 to-black">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
+            {tFunc('team_title')}
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            {tFunc('team_subtitle')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-lg border border-cyan-500/20 hover:border-cyan-400/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 backdrop-blur-sm fade-in-up"
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:to-blue-500/10 rounded-lg transition-all duration-300"></div>
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 mb-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-2xl font-bold overflow-hidden">
+                  <span>{member.name.split(' ').map(n => n[0]).join('')}</span>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
+                <p className="text-gray-300 text-sm mb-4">{member.description}</p>
+
+                {member.expertise && (
+                  <div className="pt-3 border-t border-gray-700">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider">{tFunc('expertise')}</p>
+                    <p className="text-cyan-300 text-sm font-medium">{member.expertise}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center fade-in-up">
+          <p className="text-gray-400 mb-6">
+            {tFunc('team_cta_desc')}
+          </p>
+          <a
+            href="mailto:careers@havenis.ai"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50"
+          >
+            {tFunc('team_cta_button')}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TeamSection;
