@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Language } from './types';
 import { translations } from './constants';
 import UseOfFundsChart from './components/UseOfFundsChart';
-import TeamSection from './TeamSection';
+import TeamSection from './components/TeamSection';
 import { 
     MailIcon, CpuIcon, Layers3Icon, BrainCircuitIcon, GemIcon, 
     HeartPulseIcon, ShieldCheckIcon, LayoutDashboardIcon, 
@@ -11,8 +11,6 @@ import {
 } from './components/Icons';
 
 // --- Helper Components ---
-// FIX: Use React.ElementType for the 'as' prop to correctly type the polymorphic component.
-// This resolves issues with JSX namespace and allows dynamic rendering of HTML tags.
 const T: React.FC<{ tKey: string; tFunc: (key: string) => string; className?: string; as?: React.ElementType; dangerously?: boolean }> = ({ tKey, tFunc, className, as: Component = 'p', dangerously = false }) => {
     const text = tFunc(tKey);
     if (dangerously) {
@@ -54,7 +52,6 @@ const OptimizedImage: React.FC<{
     );
 };
 
-// Import all section components
 import Header from './Header';
 import HeroSection from './HeroSection';
 import VisionSection from './VisionSection';
@@ -65,7 +62,6 @@ import FinancialsSection from './FinancialsSection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
 
-// --- Main App Component ---
 const App: React.FC = () => {
     const [lang, setLang] = useState<Language>(Language.DE);
 
@@ -95,7 +91,6 @@ const App: React.FC = () => {
 
         return () => elements.forEach(el => observer.unobserve(el));
     }, []);
-
 
     return (
         <>
