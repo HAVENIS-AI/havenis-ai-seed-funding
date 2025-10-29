@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Language } from './types';
 import { translations } from './constants';
 import UseOfFundsChart from './components/UseOfFundsChart';
+import TeamSection from './TeamSection';
 import { 
     MailIcon, CpuIcon, Layers3Icon, BrainCircuitIcon, GemIcon, 
     HeartPulseIcon, ShieldCheckIcon, LayoutDashboardIcon, 
     TrendingUpIcon, CheckCheckIcon, CoinsIcon, PieChartIcon, 
     RocketIcon, UsersIcon, FileCheckIcon
 } from './components/Icons';
-import TeamSection from './TeamSection';
 
 // --- Helper Components ---
 // FIX: Use React.ElementType for the 'as' prop to correctly type the polymorphic component.
