@@ -253,5 +253,18 @@ export const translations = {
         cta_sending: "Envoi en cours...",
         cta_success: "Succès ! Le pitchdeck a été envoyé à votre e-mail.",
         cta_error: "Erreur d'envoi. Veuillez réessayer.",
-    }
+,
+
+        // Team Section
+        team_title: "Unser Team",
+        team_subtitle: "Außergewöhnliches Talent, das die Zukunft der ethischen KI-Sensorik gestaltet. Führende Experten in RF-KI, Embedded Systems und Health-Tech-Innovation.",
+        team_ceo: "CEO & CTO",
+        team_danilo_desc: "Visionärer Führungsrolle mit tiefster Expertise in RF-KI & Embedded Systems. Treiber der HAVENIS-Innovation in kontaktloser Vitalerfassung.",
+        team_cofounder: "Co-Founder",
+        team_member2_desc: "Experte in Gesundheitstechnologie und Marktexpansion.",
+        team_engineer: "Lead Engineer",
+        team_member3_desc: "Spezialisiert auf KI-Signalverarbeitung und Embedded-Systems-Entwicklung.",
+        team_cta_desc: "Treten Sie unserem wachsenden Team von Innovatoren bei, die die Grenzen der KI-Sensortechnologie verschieben.",
+        team_cta_button: "Treten Sie unserem Team bei",
+        expertise: "Expertise"    }
 };
