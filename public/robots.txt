@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://havenis-ai.github.io/havenis-ai-seed-funding/sitemap.xml
